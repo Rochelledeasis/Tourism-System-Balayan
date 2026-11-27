@@ -4,3 +4,5 @@ dist/
 .vite/
 .env
 .DS_Store
+Backend/.env
+Backend/env-additions.txt
