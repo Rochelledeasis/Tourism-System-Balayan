@@ -51,6 +51,8 @@ export default function AppointmentForm({ form, setForm, onNext }) {
     if (form.date && !form.time) err.time = 'Choose a time.';
     if (!form.purpose.trim()) err.purpose = 'Tell us what you need help with.';
     if (!form.fullName.trim()) err.fullName = 'Enter your full name.';
+    if (!/^(09|\+639)\d{9}$/.test(form.mobile.replace(/[\s-]/g, ''))) err.mobile = 'Enter a valid mobile number, e.g. 0917 123 4567.';
+    if (form.email && !/^\S+@\S+\.\S+$/.test(form.email)) err.email = 'Enter a valid email address.';
    const mobile = form.mobile.replace(/[\s-]/g, '');
    if (!/^09\d{9}$/.test(mobile)) {
   err.mobile = 'Contact number must start with 09 and contain exactly 11 digits.';
