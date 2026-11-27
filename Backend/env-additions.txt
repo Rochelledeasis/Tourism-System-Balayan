@@ -1,0 +1,6 @@
+# Idagdag sa Backend/.env (palitan ang CORS_ORIGIN kung meron na)
+JWT_SECRET=ilagay-dito-ang-mahabang-random-na-text
+CORS_ORIGIN=http://localhost:5173,http://localhost:5174
+
+# Pang-generate ng secret (patakbuhin sa terminal):
+# node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"

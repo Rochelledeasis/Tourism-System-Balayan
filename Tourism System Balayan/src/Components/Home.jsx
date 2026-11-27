@@ -1,4 +1,3 @@
-
 import '../style.css';
 
 export default function Home({ onBook, onTrack }) {
@@ -71,7 +70,7 @@ export default function Home({ onBook, onTrack }) {
         <div className="attraction-grid">
           <article className="attraction-card">
             <h3>Historic Landmarks</h3>
-            <img src="/Immaculate_Concepcion_Parish,_Balayan,_Batangas4.jpg" alt="Balayan Church" />
+            <img src="/Immaculate_Concepcion_Parish_Balayan_Batangas4.jpg" alt="Balayan Church" />
             <p>Discover historic architecture, cultural markers,
               and the stories that define Balayan.</p>
           </article>
@@ -110,7 +109,7 @@ export default function Home({ onBook, onTrack }) {
 
         <div className="survey-qr">
           <h3>Scan Me</h3>
-          <p>Place your official survey QR code here.</p>
+          <p> QR code here.</p>
         </div>
       </section>
 
