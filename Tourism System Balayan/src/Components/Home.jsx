@@ -1,6 +1,6 @@
 import '../style.css';
 
-export default function Home({ onBook, onTrack }) {
+export default function Home({ onBook, onTrack, onSurvey }) {
   return (
     <>
       {/* NAVIGATION */}
@@ -15,7 +15,14 @@ export default function Home({ onBook, onTrack }) {
 
         <nav>
           <a href="#home">Home</a>
-          <a href="#survey">Survey</a>
+          <a href="#survey"
+            onClick={(e) => {
+              e.preventDefault();
+              onSurvey();
+            }}
+          >
+            Survey
+          </a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <button onClick={onTrack}>Track Appointment</button>
@@ -38,8 +45,8 @@ export default function Home({ onBook, onTrack }) {
           </p>
 
           <div className="hero-buttons">
-            <button onClick={() => document.getElementById('survey')?.scrollIntoView({ behavior: 'smooth' })}>
-              Scan QR Code for the Survey
+            <button onClick={onSurvey}>
+              Complete the Survey
             </button>
             <button className="light-btn" onClick={onBook}>
               Book an Appointment
@@ -108,9 +115,17 @@ export default function Home({ onBook, onTrack }) {
         </div>
 
         <div className="survey-qr">
-          <h3>Scan Me</h3>
-          <p> QR code here.</p>
-        </div>
+          <h3>Share your experience</h3>
+
+          <p>
+            Help us improve our services by completing
+            the Client Satisfaction Measurement form.
+          </p>
+
+          <button onClick={onSurvey}>
+            Open Survey Form
+          </button>
+</div>
       </section>
 
       {/* CONTACT */}
